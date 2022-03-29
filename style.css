@@ -77,6 +77,14 @@ a {
   align-items: center;
   padding: 0 50px;
 }
+.navbar .search-results {
+  width: 100%;
+  height: 500px;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  background-color: var(--elem-color);
+}
 .navbar .searchbar-container {
   position: relative;
 }

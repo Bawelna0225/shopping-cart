@@ -27,10 +27,19 @@ darkModeBtn.onclick = ()  => {
 ////////////////////////////////// Search Bar /////////////////////////////////////
 const searchBarBtn = document.querySelector('.searchbar-btn')
 const searchBar = document.querySelector('.searchbar')
+const searchResult = document.querySelector('.search_result')
+const items = [...document.querySelectorAll('.product__name')]
 searchBarBtn.onclick = () => {
   searchBar.classList.toggle('active')
 }
-
+searchBar.addEventListener('input', (e) => {
+	const value = e.target.value.toLowerCase()
+	items.forEach(item => {
+		if(false){
+			console.log(item)
+		}
+	})
+})
 
 
 
