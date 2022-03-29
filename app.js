@@ -1,3 +1,8 @@
+////////////////// Load Local storage
+let productsInCart = JSON.parse(localStorage.getItem('shoppingCart'));
+
+
+
 ////////////////////////////////////// Dark Mode ///////////////////////////////////////////////
 let darkMode = localStorage.getItem('darkMode')
 const darkModeBtn = document.querySelector('.darkmode')
@@ -25,22 +30,6 @@ darkModeBtn.onclick = ()  => {
 
 
 ////////////////////////////////// Search Bar /////////////////////////////////////
-const searchBarBtn = document.querySelector('.searchbar-btn')
-const searchBar = document.querySelector('.searchbar')
-const searchResult = document.querySelector('.search_result')
-const items = [...document.querySelectorAll('.product__name')]
-searchBarBtn.onclick = () => {
-  searchBar.classList.toggle('active')
-}
-searchBar.addEventListener('input', (e) => {
-	const value = e.target.value.toLowerCase()
-	items.forEach(item => {
-		if(false){
-			console.log(item)
-		}
-	})
-})
-
 
 
 ///////////////////////////////////// Shoping Cart //////////////////////////////////////////////
@@ -51,7 +40,6 @@ shoppingCartBtn.onclick = () => {
   shoppingCart.classList.toggle('active')
 }
 
-let productsInCart = JSON.parse(localStorage.getItem('shoppingCart'));
 if(!productsInCart){
 	productsInCart = [];
 }
@@ -83,8 +71,8 @@ const updateShoppingCartHTML = function () {  // 3
                 <div class="controls">
                     <div class="quantity"><div class="decrement" data-id=${product.id}>-</div><div>${product.count}</div><div class="increment" data-id=${product.id}>+</div></div>
                     <div class="remove-btn" onclick="removeItem(${product.id})"><span class="material-icons">
-delete
-</span></div>
+					delete
+					</span></div>
                 </div>
             </div>`
                 
@@ -167,3 +155,39 @@ parentElement.addEventListener('click', (e) => { // Last
 });
 
 updateShoppingCartHTML();
+
+
+
+// document.getElementById('.search-results').innerHTML = 'chuj';
+const searchBarBtn = document.querySelector('.searchbar-btn')
+const searchBar = document.querySelector('.searchbar')
+const searchBarInput = document.querySelector('.searchbar-input')
+const searchResult = document.querySelector('.search-results')
+
+// const searchBarval = document.querySelector('.search-product').innerHTML.toLowerCase()
+const items = [...document.querySelectorAll('.search-product')]
+searchBarBtn.onclick = () => {
+  	searchBar.classList.toggle('active')
+	searchBarInput.value = ''
+	searchResult.style.display = 'none'
+}
+
+
+searchBarInput.addEventListener('input', (e) => {
+	const value = e.target.value.toLowerCase()
+	if(value.length > 0){
+		searchResult.style.display = 'flex'
+	}
+	else searchResult.style.display = 'none'
+	 items.forEach(item => {
+		 if(item.innerHTML.toLowerCase().includes(value)){
+			 item.parentElement.style.display = 'flex'
+		 }
+		 else{
+			item.parentElement.style.display = 'none'		 
+		}
+	})
+})
+
+
+
