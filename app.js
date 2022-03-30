@@ -191,3 +191,36 @@ searchBarInput.addEventListener('input', (e) => {
 
 
 
+
+///////////////////////////// Scroll Spy //////////////////////////////////
+
+
+
+let sections = [...document.querySelectorAll('.section')]
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      currentNav = document.querySelector(`a[href='#${entry.target.id}']`)
+      if (entry.isIntersecting) {
+        currentNav.classList.add('active')
+        entry.target.classList.add('active')
+      } else {
+        currentNav.classList.remove('active')
+        entry.target.classList.remove('active')
+      }
+    })
+  },
+  {
+      // rootMargin: '30%',
+      threshold: 0.5,
+  }
+)
+
+sections.forEach(section => {
+    observer.observe(section)
+})
+
+
+
+
+
+///////////////////////// Slider ///////////////////////////////////

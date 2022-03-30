@@ -4,6 +4,8 @@
   box-sizing: border-box;
   font-size: 22px;
   font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  // scroll-padding-top: 100px;
 }
 .darkmode{
     --primary: #2e2e2e;
@@ -85,9 +87,9 @@ a{
             border-radius: 50%;
             border: 1px solid transparent;
           }
-          &.active::before{
-            border: 1px solid var(--accent-color);
-          }
+        }
+        &.active .dot::before{
+          border: 1px solid var(--accent-color);
         }
       }
     }
@@ -335,17 +337,101 @@ a{
     }
   }
 }
+.page{
+  display: flex;
+  flex-direction: column;
+}
+.section{
+  height: 100vh;
+  width: 100%;
+  margin: 0px auto;
+
+}
+.welcome-section{
+  overflow: hidden;
+  margin-top: 80px;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  .slider{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    .prev-btn, .next-btn{
+      border: 1px solid var(--accent-color);
+      padding: 10px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      border-radius: 5px;
+      &:hover{
+        background-color: var(--accent-color);
+        color: #222;
+        cursor: pointer;
+      }
+    }
+  }
+  .first-panel{
+    // width: 50%;
+    margin: 120px;
+    h1{
+      font-size: 2.4rem;
+      color: var(--accent-color);
+    }
+    p{
+      max-width: 900px;
+      padding: 50px 0px;
+    }
+    button{
+      border-radius: 5px;
+      padding: 10px 20px;
+      border: 1px solid var(--accent-color);
+      background-color: transparent;
+      color: var(--text);
+      transition: 200ms ease-in-out;
+      &:hover{
+        transition: 200ms ease-in-out;
+        background-color: var(--accent-color);
+        color: #222;
+        cursor: pointer;
+      }
+    }
+  }
+  .second-panel{
+    // width: 50%;
+    display: none;
+  }
+
+}
 .shopping-section{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+ 
+  h1{
+    font-size: 2.2rem;
+  }
+}
+.card-container{
   width: min(100% - 2rem, 1600px);
+  overflow: auto;
   height: max-content;
-  background-color: var(--secondary);
+  margin: 0 auto;
+  // background-color: var(--secondary);
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
   padding: 20px;
   flex-wrap: wrap;
-  box-shadow: 0px 0px 5px var(--shadow-color);
+  // box-shadow: 0px 0px 5px var(--shadow-color);
   .card{
     width: 300px;
     height: 400px;
