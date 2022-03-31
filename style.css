@@ -134,12 +134,15 @@ a {
 .navbar .search-results .card {
   width: 500px;
   height: 200px;
-  display: flex;
+  display: none;
   justify-content: space-between;
   align-items: center;
   gap: 25px;
   padding: 25px;
   background-color: var(--elem-color);
+}
+.navbar .search-results .card.show {
+  display: flex;
 }
 .navbar .search-results .card .product__img {
   overflow: hidden;
@@ -450,5 +453,14 @@ h4 {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: flex-end;
+  }
+  .navbar .logo {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */

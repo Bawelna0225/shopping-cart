@@ -158,20 +158,20 @@ updateShoppingCartHTML();
 
 
 
-// document.getElementById('.search-results').innerHTML = 'chuj';
 const searchBarBtn = document.querySelector('.searchbar-btn')
 const searchBar = document.querySelector('.searchbar')
 const searchBarInput = document.querySelector('.searchbar-input')
 const searchResult = document.querySelector('.search-results')
-
-// const searchBarval = document.querySelector('.search-product').innerHTML.toLowerCase()
+const noResults = document.querySelector('.no-results')
 const items = [...document.querySelectorAll('.search-product')]
+const cards = [...document.querySelectorAll('.card')]
+
+
 searchBarBtn.onclick = () => {
   	searchBar.classList.toggle('active')
 	searchBarInput.value = ''
 	searchResult.style.display = 'none'
 }
-
 
 searchBarInput.addEventListener('input', (e) => {
 	const value = e.target.value.toLowerCase()
@@ -181,13 +181,19 @@ searchBarInput.addEventListener('input', (e) => {
 	else searchResult.style.display = 'none'
 	 items.forEach(item => {
 		 if(item.innerHTML.toLowerCase().includes(value)){
-			 item.parentElement.style.display = 'flex'
+			item.parentElement.classList.add('show')
 		 }
 		 else{
-			item.parentElement.style.display = 'none'		 
+			item.parentElement.classList.remove('show')
 		}
 	})
+
+	noResults.style.display = 'flex'
+	cards.forEach(card => {
+		if(card.classList.contains('show')) noResults.style.display = 'none'
+	})
 })
+
 
 
 
@@ -210,7 +216,6 @@ const observer = new IntersectionObserver(entries => {
     })
   },
   {
-      // rootMargin: '30%',
       threshold: 0.5,
   }
 )
