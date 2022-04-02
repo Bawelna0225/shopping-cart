@@ -113,6 +113,7 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
+  z-index: 10;
 }
 .navbar .search-results {
   width: 80%;
@@ -350,7 +351,6 @@ h4 {
 
 .welcome-section {
   overflow: hidden;
-  margin-top: 80px;
   height: 100vh;
   width: 100%;
   display: flex;
@@ -455,6 +455,104 @@ h4 {
   align-items: center;
 }
 
+.slider {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+.slider .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 300ms ease-in-out;
+}
+.slider .slide:first-child {
+  background: url("https://source.unsplash.com/RyRpq9SUwAU/1600x900") no-repeat center top/cover;
+}
+.slider .slide:nth-child(2) {
+  background: url("https://source.unsplash.com/BeOW_PJjA0w/1600x900") no-repeat center top/cover;
+}
+.slider .slide:nth-child(3) {
+  background: url("https://source.unsplash.com/TMOeGZw9NY4/1600x900") no-repeat center top/cover;
+}
+.slider .slide:nth-child(4) {
+  background: url("https://source.unsplash.com/yXpA_eCbtzI/1600x900") no-repeat center top/cover;
+}
+.slider .slide:nth-child(5) {
+  background: url("https://source.unsplash.com/ULmaQh9Gvbg/1600x900") no-repeat center top/cover;
+}
+.slider .slide:nth-child(6) {
+  background: url("https://source.unsplash.com/ggZuL3BTSJU/1600x900") no-repeat center center/cover;
+}
+.slider .slide.current {
+  opacity: 1;
+  transition: 300ms ease-in-out;
+}
+.slider .slide.current .content {
+  left: 0;
+  opacity: 1;
+  transition: 700ms ease-in-out 300ms;
+}
+.slider .slide .content {
+  position: absolute;
+  bottom: 70px;
+  left: -650px;
+  width: 600px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 35px;
+}
+.slider .slide .content h1 {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+}
+.slider .slide .content p {
+  word-wrap: break-word;
+}
+
+.buttons button {
+  padding: 13px 15px;
+  font-size: 0.7rem;
+  border: 1px solid #fff;
+  color: #fff;
+  cursor: pointer;
+  background-color: transparent;
+  border-radius: 50%;
+}
+.buttons button:hover {
+  background-color: #fff;
+  color: #000;
+}
+.buttons #prev {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+}
+.buttons #next {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+}
+
+@media (max-width: 500px) {
+  .slide .content {
+    bottom: -300px !important;
+    left: 0 !important;
+    width: 100%;
+  }
+  .slide.current .content {
+    transform: translateY(-300px);
+    left: 0;
+    bottom: 0;
+  }
+}
 @media (max-width: 768px) {
   .navbar {
     justify-content: flex-end;
