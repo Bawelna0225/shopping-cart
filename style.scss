@@ -63,7 +63,7 @@ a{
   right: 10px;
   z-index: 10;
   // bottom: calc(50% - 150px);
-  bottom: 10vw;
+  bottom: 20%;
   ul{
     list-style-type: none;
     li{
@@ -156,7 +156,8 @@ a{
         }
         .add-to-cart{
           width: max-content;
-          flex-direction: column;
+          flex-direction: row;
+          gap: 10px;
           // background-color: red;
           &__btn{
             font-size: min(4vw, 20px) !important;
@@ -437,7 +438,8 @@ a{
 }
 .card-container{
   width: min(100% - 2rem, 1600px);
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
   height: max-content;
   margin: 0 auto;
   // background-color: var(--secondary);
@@ -587,16 +589,36 @@ a{
 
 @media (max-width: 768px){
   .navbar{
-    justify-content: flex-end;
+    justify-content: space-around;
+    height: 60px;
+    top: calc(100% - 60px) !important;
     .logo{
       display: none;
     }
-    .searchbar{
 
+    .searchbar-container{
+      // top: calc(-100% + 890px);
+      top: -20px;
+      position: fixed;
+      // right: -88%;
+      right: -20px;
+      .searchbar-btn{
+        border-radius: 0px;
+      }
+      .searchbar{
+        width: 100vw;
+        border-radius: 0px;
+      }
     }
+
+  }
+  .shopping-cart{
+    top: calc(100% - 560px) !important; // shoping cart height + navbar height
   }
   .search-results{
     // left: 0% !important;
+    // top: 102px;
+    top: 20px;
     // transform: translate(0%,0%) !important;
   }
 }
