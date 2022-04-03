@@ -60,18 +60,19 @@ a{
 .side-nav{
   display: flex;
   position: fixed;
-  left: 10px;
+  right: 10px;
   z-index: 10;
-  bottom: calc(50% - 150px);
+  // bottom: calc(50% - 150px);
+  bottom: 10vw;
   ul{
     list-style-type: none;
     li{
-      padding: 15px;
+      padding: 10px;
       
       a{
         .dot{
-          width: 15px;
-          height: 15px;
+          width: 10px;
+          height: 10px;
           border-radius: 50%;
           background-color: var(--accent-color);
           border: 1px solid var(--accent-color);
@@ -79,8 +80,8 @@ a{
           &::before{
             content: "";
             position: absolute;
-            width: 35px;
-            height: 35px;
+            width: 25px;
+            height: 25px;
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
@@ -105,16 +106,19 @@ a{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 50px;
-  z-index: 10;
+  padding: 0 20px;
+  z-index: 50;
+  // position: relative;
   .search-results{
-    width: 80%;
+    width: min(100%, 1200px);
     margin: 0 auto;
     height: 800px;
     position: fixed;
-    top: 80px;
-    left: 10%;
+    // top: 80px;
+    left: 50%;
+    transform: translate(-50%, 0%);
     padding: 20px;
+    margin-top: 20px;
     background-color: var(--secondary);
     box-shadow: 0px 0px 15px var(--shadow-color);
     display: none;
@@ -124,7 +128,7 @@ a{
     align-items: center;
     overflow: auto;
     .card{
-        width: 500px;
+        width: min(100% - 0.1rem ,500px);
         height: 200px;
         display: none;
         justify-content: space-between;
@@ -139,9 +143,11 @@ a{
           &__img{
             overflow: hidden;
             width: 100px !important;
-            height: 100px;     
+            // height: 100px;    
+            aspect-ratio: 1/1; 
           }
           &__name{
+            font-size: min(5vw, 20px)
           }
           &__price{
             font-size: 1.5rem;
@@ -151,6 +157,11 @@ a{
         .add-to-cart{
           width: max-content;
           flex-direction: column;
+          // background-color: red;
+          &__btn{
+            font-size: min(4vw, 20px) !important;
+            
+          }
         }
     }
     
@@ -238,10 +249,11 @@ a{
     // background: red;
   }
 .shopping-cart{
-  width: 400px;
+  width: min(100%,400px);
   height: 500px;
   background-color: var(--secondary);
   position: fixed;
+  z-index: 20;
   right: 0;
   top: 80px;
   box-shadow: -5px 10px 10px var(--shadow-color);
@@ -582,5 +594,9 @@ a{
     .searchbar{
 
     }
+  }
+  .search-results{
+    // left: 0% !important;
+    // transform: translate(0%,0%) !important;
   }
 }
