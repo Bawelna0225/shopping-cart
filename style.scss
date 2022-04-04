@@ -52,6 +52,7 @@ body{
   align-items: center;
   min-height: 100vh;
   color: var(--text);
+  overflow-x: hidden;
 }
 a{
   color: var(--text);
@@ -429,7 +430,8 @@ a{
 }
 .shopping-section{
   width: 100%;
-  min-height: 100vh;
+  // height: 900vh;
+  height: max-content;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -584,7 +586,7 @@ a{
     }
     &.current{
       .content {
-        transform: translateY(-380px);
+        transform: translateY(-360px);
         left: 0;
         bottom: 180px;
       }
@@ -620,11 +622,15 @@ a{
   .shopping-cart{
     top: calc(100% - 560px) !important; // shoping cart height + navbar height
     width: 100%;
+   
   }
   .search-results{
     // left: 0% !important;
     // top: 102px;
     top: 20px;
     // transform: translate(0%,0%) !important;
+  }
+  .shopping-section{
+    height: 150vh !important;
   }
 }

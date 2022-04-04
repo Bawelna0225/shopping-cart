@@ -232,7 +232,7 @@ sections.forEach(section => {
 const slides = document.querySelectorAll('.slide')
 const nextBtn = document.querySelector('#next')
 const prevBtn = document.querySelector('#prev')
-const auto = false
+const auto = true
 const intervalTime = 5000
 let slideInterval
 
