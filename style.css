@@ -106,7 +106,7 @@ a {
   width: 100%;
   height: 80px;
   position: fixed;
-  top: 0;
+  bottom: calc(100% - 80px);
   background-color: var(--secondary);
   box-shadow: 0px 0px 5px var(--shadow-color);
   display: flex;
@@ -118,7 +118,7 @@ a {
 .navbar .search-results {
   width: min(100%, 1200px);
   margin: 0 auto;
-  height: 800px;
+  height: min(800px, 100vh);
   position: fixed;
   left: 50%;
   transform: translate(-50%, 0%);
@@ -132,6 +132,9 @@ a {
   justify-content: center;
   align-items: center;
   overflow: auto;
+}
+.navbar .search-results .material-icons {
+  pointer-events: none;
 }
 .navbar .search-results .card {
   width: min(100% - 0.1rem, 500px);
@@ -425,6 +428,7 @@ h4 {
 }
 .shopping-section h1 {
   font-size: 2.2rem;
+  margin: 2rem 0;
 }
 
 .card-container {
@@ -503,20 +507,20 @@ h4 {
   transition: 300ms ease-in-out;
 }
 .slider .slide.current .content {
-  left: 0;
+  left: 100px;
   opacity: 1;
   transition: 700ms ease-in-out 300ms;
 }
 .slider .slide .content {
   position: absolute;
-  bottom: 70px;
+  bottom: 200px;
   left: -650px;
-  width: 600px;
+  width: 800px;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
   opacity: 0;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: var(--elem-color);
   padding: 35px;
 }
 .slider .slide .content h1 {
@@ -558,16 +562,16 @@ h4 {
     width: 100%;
   }
   .slide.current .content {
-    transform: translateY(-300px);
+    transform: translateY(-380px);
     left: 0;
-    bottom: 0;
+    bottom: 180px;
   }
 }
 @media (max-width: 768px) {
   .navbar {
     justify-content: space-around;
     height: 60px;
-    top: calc(100% - 60px) !important;
+    bottom: 0 !important;
   }
   .navbar .logo {
     display: none;
@@ -587,6 +591,7 @@ h4 {
 
   .shopping-cart {
     top: calc(100% - 560px) !important;
+    width: 100%;
   }
 
   .search-results {
