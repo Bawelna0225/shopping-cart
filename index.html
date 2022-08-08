@@ -1,521 +1,431 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-</head>
-<body>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <div class="side-nav">
-      <ul>
-        <li>
-          <a href="#section1" class="nav-link">
-            <div class="dot"></div>
-          </a>
-        </li>
-        <li>
-          <a href="#section2" class="nav-link">
-            <div class="dot"></div>
-          </a>
-        </li>
-        <li>
-          <a href="#section3" class="nav-link">
-            <div class="dot"></div>
-          </a>
-        </li>
-        <li>
-          <a href="#section4" class="nav-link">
-            <div class="dot"></div>
-          </a>
-        </li>
-        <li>
-          <a href="#section5" class="nav-link">
-            <div class="dot"></div>
-          </a>
-        </li>
-      </ul>
-    </div>
-    <!-- Side nav end -->
-    <div class="navbar">
-      <div class="logo">LOGO</div>
-    <ul>
-      <li class="searchbar-container">
-          <a href="#0">
-              <span class="material-icons searchbar-btn">
-                  search
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 
-              </span>
+		<!-- Side nav end -->
+		<div class="navbar">
+			<div class="logo">LOGO</div>
+			<ul>
+				<li class="searchbar-container">
+					<a href="#0">
+						<span class="material-icons searchbar-btn"> search </span>
+					</a>
+					<div class="searchbar">
+						<input class="searchbar-input" type="search" placeholder="Search..." />
+					</div>
+					<div class="search-results">
+						<div class="no-results">No results found</div>
+						<div class="card">
+							<div class="product__img">
+								<img src="https://picsum.photos/300/300" alt="" />
+							</div>
+							<div class="product__name search-product">First Product</div>
 
-          </a>
-          <div class="searchbar">
-            <input class="searchbar-input" type="search" placeholder="Search...">
-          </div>
-          <div class="search-results">
-            <div class="no-results">No results found</div>
-              <div class="card">
-                <div class="product__img">
-                  <img src="https://picsum.photos/300/300" alt="">
-                </div>
-                <div class="product__name search-product">
-                  First Product
-                </div>
+							<div class="add-to-cart">
+								<div class="product__price">
+									<div class="currency">$</div>
+									<div class="price">9.99</div>
+								</div>
+								<div class="add-to-cart__btn" data-product-id="1">
+									<span class="material-icons"> add_shopping_cart </span>
+								</div>
+							</div>
+						</div>
 
-                <div class="add-to-cart">
-                  <div class="product__price">
-                    <div class="currency">$</div><div class="price">9.99</div>
-                  </div>
-                  <div class="add-to-cart__btn" data-product-id="1">
-                    <span class="material-icons">
-                    add_shopping_cart
-                    </span>
-                  </div>
-                </div>
-              </div>
+						<div class="card">
+							<div class="product__img">
+								<img src="https://picsum.photos/300/301" alt="" />
+							</div>
+							<div class="product__name search-product">Second Product</div>
+							<div class="add-to-cart">
+								<div class="product__price">
+									<div class="currency">$</div>
+									<div class="price">24.99</div>
+								</div>
+								<div class="add-to-cart__btn" data-product-id="2">
+									<span class="material-icons"> add_shopping_cart </span>
+								</div>
+							</div>
+						</div>
 
+						<div class="card">
+							<div class="product__img">
+								<img src="https://picsum.photos/300/302" alt="" />
+							</div>
+							<div class="product__name search-product">Third Product</div>
+							<div class="add-to-cart">
+								<div class="product__price">
+									<div class="currency">$</div>
+									<div class="price">1.99</div>
+								</div>
+								<div class="add-to-cart__btn" data-product-id="3">
+									<span class="material-icons"> add_shopping_cart </span>
+								</div>
+							</div>
+						</div>
 
-              <div class="card">
-                <div class="product__img">
-                  <img src="https://picsum.photos/300/301" alt="">
-                </div>
-                <div class="product__name search-product">
-                  Second Product
-                </div>
-                <div class="add-to-cart">
-                  <div class="product__price">
-                    <div class="currency">$</div><div class="price">24.99</div>
-                  </div>
-                  <div class="add-to-cart__btn" data-product-id="2">
-                    <span class="material-icons">
-add_shopping_cart
-</span>
-                  </div>
-                </div>
-              </div>
+						<div class="card">
+							<div class="product__img">
+								<img src="https://picsum.photos/300/303" alt="" />
+							</div>
+							<div class="product__name search-product">Fourth Product</div>
+							<div class="add-to-cart">
+								<div class="product__price">
+									<div class="currency">$</div>
+									<div class="price">2.99</div>
+								</div>
+								<div class="add-to-cart__btn" data-product-id="4">
+									<span class="material-icons"> add_shopping_cart </span>
+								</div>
+							</div>
+						</div>
 
-                <div class="card">
-                <div class="product__img">
-                  <img src="https://picsum.photos/300/302" alt="">
-                </div>
-                <div class="product__name search-product">
-                  Third Product
-                </div>
-                <div class="add-to-cart">
-                  <div class="product__price">
-                    <div class="currency">$</div><div class="price">1.99</div>
-                  </div>
-                  <div class="add-to-cart__btn" data-product-id="3">
-                    <span class="material-icons">
-add_shopping_cart
-</span>
-                  </div>
-                </div>
-              </div>
+						<div class="card">
+							<div class="product__img">
+								<img src="https://picsum.photos/300/304" alt="" />
+							</div>
+							<div class="product__name search-product">Fifth Product</div>
+							<div class="add-to-cart">
+								<div class="product__price">
+									<div class="currency">$</div>
+									<div class="price">4.99</div>
+								</div>
+								<div class="add-to-cart__btn" data-product-id="6">
+									<span class="material-icons"> add_shopping_cart </span>
+								</div>
+							</div>
+						</div>
 
-                <div class="card">
-                <div class="product__img">
-                  <img src="https://picsum.photos/300/303" alt="">
-                </div>
-                <div class="product__name search-product">
-                  Fourth Product
-                  </div>
-                <div class="add-to-cart">
-                    <div class="product__price">
-                      <div class="currency">$</div><div class="price">2.99</div>
-                    </div>
-                  <div class="add-to-cart__btn" data-product-id="4">
-                    <span class="material-icons">
-add_shopping_cart
-</span>
-                  </div>
-                </div>
-              </div>
+						<div class="card">
+							<div class="product__img">
+								<img src="https://picsum.photos/300/305" alt="" />
+							</div>
+							<div class="product__name search-product">Sixth Product</div>
+							<div class="add-to-cart">
+								<div class="product__price">
+									<div class="currency">$</div>
+									<div class="price">39.99</div>
+								</div>
+								<div class="add-to-cart__btn" data-product-id="7">
+									<span class="material-icons"> add_shopping_cart </span>
+								</div>
+							</div>
+						</div>
 
-                <div class="card">
-                <div class="product__img">
-                  <img src="https://picsum.photos/300/304" alt="">
-                </div>
-                <div class="product__name search-product">
-                  Fifth Product
-                </div>
-                <div class="add-to-cart">
-                  <div class="product__price">
-                    <div class="currency">$</div><div class="price">4.99</div>
-                  </div>
-                  <div class="add-to-cart__btn" data-product-id="6">
-                    <span class="material-icons">
-add_shopping_cart
-</span>
-                  </div>
-                </div>
-              </div>
+						<div class="card">
+							<div class="product__img">
+								<img src="https://picsum.photos/300/306" alt="" />
+							</div>
+							<div class="product__name search-product">Seventh Product</div>
+							<div class="add-to-cart">
+								<div class="product__price">
+									<div class="currency">$</div>
+									<div class="price">29.99</div>
+								</div>
+								<div class="add-to-cart__btn" data-product-id="8">
+									<span class="material-icons"> add_shopping_cart </span>
+								</div>
+							</div>
+						</div>
 
-                <div class="card">
-                <div class="product__img">
-                  <img src="https://picsum.photos/300/305" alt="">
-                </div>
-                <div class="product__name search-product">
-                 Sixth Product
-                </div>
-                <div class="add-to-cart">
-                  <div class="product__price">
-                    <div class="currency">$</div><div class="price">39.99</div>
-                  </div>
-                  <div class="add-to-cart__btn" data-product-id="7">
-                    <span class="material-icons">
-add_shopping_cart
-</span>
-                  </div>
-                </div>
-              </div>
+						<div class="card">
+							<div class="product__img">
+								<img src="https://picsum.photos/300/307" alt="" />
+							</div>
+							<div class="product__name search-product">Eight Product</div>
+							<div class="add-to-cart">
+								<div class="product__price">
+									<div class="currency">$</div>
+									<div class="price">5.99</div>
+								</div>
+								<div class="add-to-cart__btn" data-product-id="9">
+									<span class="material-icons"> add_shopping_cart </span>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="product__img">
+								<img src="https://picsum.photos/300/308" alt="" />
+							</div>
+							<div class="product__name search-product">Ninth Product</div>
+							<div class="add-to-cart">
+								<div class="product__price">
+									<div class="currency">$</div>
+									<div class="price">6.99</div>
+								</div>
+								<div class="add-to-cart__btn" data-product-id="10">
+									<span class="material-icons"> add_shopping_cart </span>
+								</div>
+							</div>
+						</div>
 
-                <div class="card">
-                <div class="product__img">
-                  <img src="https://picsum.photos/300/306" alt="">
-                </div>
-                <div class="product__name search-product">
-                  Seventh Product
-                </div>
-                <div class="add-to-cart">
-                  <div class="product__price">
-                    <div class="currency">$</div><div class="price">29.99</div>
-                  </div>
-                  <div class="add-to-cart__btn" data-product-id="8">
-                    <span class="material-icons">
-add_shopping_cart
-</span>
-                  </div>
-                </div>
-              </div>
-
-                <div class="card">
-                <div class="product__img">
-                  <img src="https://picsum.photos/300/307" alt="">
-                </div>
-                <div class="product__name search-product">
-                  Eight Product
-                </div>
-                <div class="add-to-cart">
-                  <div class="product__price">
-                    <div class="currency">$</div><div class="price">5.99</div>
-                  </div>
-                  <div class="add-to-cart__btn" data-product-id="9">
-                    <span class="material-icons">
-add_shopping_cart
-</span>
-                  </div>
-                </div>
-              </div>
-                <div class="card">
-                <div class="product__img">
-                  <img src="https://picsum.photos/300/308" alt="">
-                </div>
-                <div class="product__name search-product">
-                  Ninth Product
-                </div>
-                <div class="add-to-cart">
-                  <div class="product__price">
-                    <div class="currency">$</div><div class="price">6.99</div>
-                  </div>
-                  <div class="add-to-cart__btn" data-product-id="10">
-                    <span class="material-icons">
-add_shopping_cart
-</span>
-                  </div>
-                </div>
-              </div>
-
-                <div class="card">
-                <div class="product__img">
-                  <img src="https://picsum.photos/300/309" alt="">
-                </div>
-                <div class="product__name search-product">
-                  Tenth Product
-                </div>
-                <div class="add-to-cart">
-                  <div class="product__price">
-                    <div class="currency">$</div><div class="price">19.99</div>
-                  </div>
-                  <div class="add-to-cart__btn" data-product-id="11">
-                    <span class="material-icons">
-add_shopping_cart
-</span>
-                  </div>
-                </div>
-              </div>
-          </div>
-      </li>
-      <li>
-        <a href="#0">
-          <span class="material-icons darkmode">
-            dark_mode
-          </span>
-        </a>
-      </li>
-      <li>
-          <a href="#0">
-              <span class="material-icons">
-                  account_circle
-              </span>
-          </a>
-      </li>
-      <a href="#0" class="shopping-cart-btn"><span class="material-icons">shopping_cart</span><div class="total-cost">$0.00</div></a>
-      
-    </ul>
-  </div>
-  <!-- Navbar end -->
-  <div class="shopping-cart">
-              <!-- 
+						<div class="card">
+							<div class="product__img">
+								<img src="https://picsum.photos/300/309" alt="" />
+							</div>
+							<div class="product__name search-product">Tenth Product</div>
+							<div class="add-to-cart">
+								<div class="product__price">
+									<div class="currency">$</div>
+									<div class="price">19.99</div>
+								</div>
+								<div class="add-to-cart__btn" data-product-id="11">
+									<span class="material-icons"> add_shopping_cart </span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<a href="#0">
+						<span class="material-icons darkmode"> dark_mode </span>
+					</a>
+				</li>
+				<li>
+					<a href="#0">
+						<span class="material-icons"> account_circle </span>
+					</a>
+				</li>
+				<a href="#0" class="shopping-cart-btn"
+					><span class="material-icons">shopping_cart</span>
+					<div class="total-cost">$0.00</div></a
+				>
+			</ul>
+		</div>
+		<!-- Navbar end -->
+		<div class="shopping-cart">
+			<!-- 
 
                   Items From JS Here
 
               -->
-  </div>
-  <!-- Shoping Cart end -->
-  <div class="page">
-    <div class="welcome-section section" id="section1">
-        <div class="slider">
-          <div class="slide current">
-            <div class="content">
-              <h1>Slide One</h1>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit hic
-                maxime, voluptatibus labore doloremque vero!
-              </p>
-            </div>
-          </div>
-          <div class="slide">
-            <div class="content">
-              <h1>Slide Two</h1>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit hic
-                maxime, voluptatibus labore doloremque vero!
-              </p>
-            </div>
-          </div>
-          <div class="slide">
-            <div class="content">
-              <h1>Slide Three</h1>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit hic
-                maxime, voluptatibus labore doloremque vero!
-              </p>
-            </div>
-          </div>
-          <div class="slide">
-            <div class="content">
-              <h1>Slide Four</h1>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit hic
-                maxime, voluptatibus labore doloremque vero!
-              </p>
-            </div>
-          </div>
-          <div class="slide">
-            <div class="content">
-              <h1>Slide Five</h1>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit hic
-                maxime, voluptatibus labore doloremque vero!
-              </p>
-            </div>
-          </div>
-          <div class="slide">
-            <div class="content">
-              <h1>Slide Six</h1>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit hic
-                maxime, voluptatibus labore doloremque vero!
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="buttons">
-          <button id="prev"><span class="material-icons">arrow_back_ios_new</span></button>
-          <button id="next"><span class="material-icons">arrow_forward_ios</span></button>
-        </div>
+		</div>
+		<!-- Shoping Cart end -->
+		<div class="page">
+			<div class="welcome-section section" id="section1">
+				<div class="slider">
+					<div class="slide current">
+						<div class="content">
+							<h1>Slide One</h1>
+							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit hic maxime, voluptatibus labore doloremque vero! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum aspernatur rem repudiandae, et inventore laboriosam qui minima quae! Ipsam nulla sed ipsa unde deleniti nobis eum quo consectetur quisquam eius.</p>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="content">
+							<h1>Slide Two</h1>
+							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit hic maxime, voluptatibus labore doloremque vero! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab officia aperiam voluptatibus, dolorem sed incidunt doloribus repellendus. Nobis dolore harum nemo rerum, fugiat laboriosam voluptates, impedit debitis maxime quidem quae.</p>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="content">
+							<h1>Slide Three</h1>
+							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit hic maxime, voluptatibus labore doloremque vero! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non aut dolores quos in dignissimos, sunt quis veniam vel soluta possimus quidem blanditiis quasi suscipit nihil eius. Hic dolor sit architecto?</p>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="content">
+							<h1>Slide Four</h1>
+							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit hic maxime, voluptatibus labore doloremque vero! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium nisi ratione unde, quos praesentium fugiat eaque id tenetur reprehenderit maxime laboriosam distinctio, sequi sapiente voluptates? Consequatur tenetur quisquam similique maiores.</p>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="content">
+							<h1>Slide Five</h1>
+							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit hic maxime, voluptatibus labore doloremque vero! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia officiis nisi labore! Rerum aut exercitationem, minima saepe nemo maiores, voluptate vero, placeat aliquid dolores porro quidem obcaecati reiciendis dignissimos sed?</p>
+						</div>
+					</div>
+					<div class="slide">
+						<div class="content">
+							<h1>Slide Six</h1>
+							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit hic maxime, voluptatibus labore doloremque vero! Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, reprehenderit. Dolorem, non? Optio consequatur impedit labore id in inventore nulla neque, accusantium earum autem aut iure, ducimus cupiditate beatae reiciendis.</p>
+						</div>
+					</div>
+				</div>
+				<div class="buttons">
+					<button id="prev"><span class="material-icons">arrow_back_ios_new</span></button>
+					<button id="next"><span class="material-icons">arrow_forward_ios</span></button>
+				</div>
+			</div>
 
-    </div>
-
-    <div class="shopping-section section" id="section2">
-      <h1>Shoping Section</h1>
-      <div class="card-container">
-        <div class="card">
-          <div class="product__img">
-            <img src="https://picsum.photos/300/300" alt="">
-          </div>
-          <div class="product__name">
-            First Product
-          </div>
-          <div class="product__price">
-            <div class="currency">$</div><div class="price">9.99</div>
-          </div>
-          <div class="add-to-cart">
-            <div class="add-to-cart__btn" data-product-id="1">
-              Add to Cart
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="product__img">
-            <img src="https://picsum.photos/300/301" alt="">
-          </div>
-          <div class="product__name">
-            Second Product
-          </div>
-          <div class="product__price">
-            <div class="currency">$</div><div class="price">24.99</div>
-          </div>
-          <div class="add-to-cart">
-            <div class="add-to-cart__btn" data-product-id="2">
-              Add to Cart
-            </div>
-          </div>
-        </div>
-          <div class="card">
-          <div class="product__img">
-            <img src="https://picsum.photos/300/302" alt="">
-          </div>
-          <div class="product__name">
-            Third Product
-          </div>
-          <div class="product__price">
-            <div class="currency">$</div><div class="price">1.99</div>
-          </div>
-          <div class="add-to-cart">
-            <div class="add-to-cart__btn" data-product-id="3">
-              Add to Cart
-            </div>
-          </div>
-        </div>
-          <div class="card">
-          <div class="product__img">
-            <img src="https://picsum.photos/300/303" alt="">
-          </div>
-          <div class="product__name">
-            Fourth Product
-            </div>
-          <div class="product__price">
-            <div class="currency">$</div><div class="price">2.99</div>
-          </div>
-          <div class="add-to-cart">
-            <div class="add-to-cart__btn" data-product-id="4">
-              Add to Cart
-            </div>
-          </div>
-        </div>
-          <div class="card">
-          <div class="product__img">
-            <img src="https://picsum.photos/300/304" alt="">
-          </div>
-          <div class="product__name">
-            Fifth Product
-          </div>
-          <div class="product__price">
-            <div class="currency">$</div><div class="price">4.99</div>
-          </div>
-          <div class="add-to-cart">
-            <div class="add-to-cart__btn" data-product-id="6">
-              Add to Cart
-            </div>
-          </div>
-        </div>
-          <div class="card">
-          <div class="product__img">
-            <img src="https://picsum.photos/300/305" alt="">
-          </div>
-          <div class="product__name">
-           Sixth Product
-          </div>
-          <div class="product__price">
-            <div class="currency">$</div><div class="price">39.99</div>
-          </div>
-          <div class="add-to-cart">
-            <div class="add-to-cart__btn" data-product-id="7">
-              Add to Cart
-            </div>
-          </div>
-        </div>
-          <div class="card">
-          <div class="product__img">
-            <img src="https://picsum.photos/300/306" alt="">
-          </div>
-          <div class="product__name">
-            Seventh Product
-          </div>
-          <div class="product__price">
-            <div class="currency">$</div><div class="price">29.99</div>
-          </div>
-          <div class="add-to-cart">
-            <div class="add-to-cart__btn" data-product-id="8">
-              Add to Cart
-            </div>
-          </div>
-        </div>
-          <div class="card">
-          <div class="product__img">
-            <img src="https://picsum.photos/300/307" alt="">
-          </div>
-          <div class="product__name">
-            Eight Product
-          </div>
-          <div class="product__price">
-            <div class="currency">$</div><div class="price">5.99</div>
-          </div>
-          <div class="add-to-cart">
-            <div class="add-to-cart__btn" data-product-id="9">
-              Add to Cart
-            </div>
-          </div>
-        </div>
-          <div class="card">
-          <div class="product__img">
-            <img src="https://picsum.photos/300/308" alt="">
-          </div>
-          <div class="product__name">
-            Ninth Product
-          </div>
-          <div class="product__price">
-            <div class="currency">$</div><div class="price">6.99</div>
-          </div>
-          <div class="add-to-cart">
-            <div class="add-to-cart__btn" data-product-id="10">
-              Add to Cart
-            </div>
-          </div>
-        </div>
-          <div class="card">
-          <div class="product__img">
-            <img src="https://picsum.photos/300/309" alt="">
-          </div>
-          <div class="product__name">
-            Tenth Product
-          </div>
-          <div class="product__price">
-            <div class="currency">$</div><div class="price">19.99</div>
-          </div>
-          <div class="add-to-cart">
-            <div class="add-to-cart__btn" data-product-id="11">
-              Add to Cart
-            </div>
-          </div>
-        </div>
-      </div>
-      
-    </div>
-      <!-- Shoping Section end -->
-    <div class="section" id="section3"></div>
-    <!-- section end -->
-    <div class="section" id="section4"></div>
-    <!-- Section end -->
-    <div class="section contact" id="section5"></div>
-
-
-  </div>
-
-
-</body>
-<script defer src="app.js"></script>
+			<div class="shopping-section section" id="section2">
+				<h1>Shoping Section</h1>
+				<div class="card-container">
+					<div class="card">
+						<div class="product__img">
+							<img src="https://picsum.photos/300/300" alt="" />
+						</div>
+						<div class="product__name">First Product</div>
+						<div class="product__price">
+							<div class="currency">$</div>
+							<div class="price">9.99</div>
+						</div>
+						<div class="add-to-cart">
+							<div class="add-to-cart__btn" data-product-id="1">Add to Cart</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="product__img">
+							<img src="https://picsum.photos/300/301" alt="" />
+						</div>
+						<div class="product__name">Second Product</div>
+						<div class="product__price">
+							<div class="currency">$</div>
+							<div class="price">24.99</div>
+						</div>
+						<div class="add-to-cart">
+							<div class="add-to-cart__btn" data-product-id="2">Add to Cart</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="product__img">
+							<img src="https://picsum.photos/300/302" alt="" />
+						</div>
+						<div class="product__name">Third Product</div>
+						<div class="product__price">
+							<div class="currency">$</div>
+							<div class="price">1.99</div>
+						</div>
+						<div class="add-to-cart">
+							<div class="add-to-cart__btn" data-product-id="3">Add to Cart</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="product__img">
+							<img src="https://picsum.photos/300/303" alt="" />
+						</div>
+						<div class="product__name">Fourth Product</div>
+						<div class="product__price">
+							<div class="currency">$</div>
+							<div class="price">2.99</div>
+						</div>
+						<div class="add-to-cart">
+							<div class="add-to-cart__btn" data-product-id="4">Add to Cart</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="product__img">
+							<img src="https://picsum.photos/300/304" alt="" />
+						</div>
+						<div class="product__name">Fifth Product</div>
+						<div class="product__price">
+							<div class="currency">$</div>
+							<div class="price">4.99</div>
+						</div>
+						<div class="add-to-cart">
+							<div class="add-to-cart__btn" data-product-id="6">Add to Cart</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="product__img">
+							<img src="https://picsum.photos/300/305" alt="" />
+						</div>
+						<div class="product__name">Sixth Product</div>
+						<div class="product__price">
+							<div class="currency">$</div>
+							<div class="price">39.99</div>
+						</div>
+						<div class="add-to-cart">
+							<div class="add-to-cart__btn" data-product-id="7">Add to Cart</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="product__img">
+							<img src="https://picsum.photos/300/306" alt="" />
+						</div>
+						<div class="product__name">Seventh Product</div>
+						<div class="product__price">
+							<div class="currency">$</div>
+							<div class="price">29.99</div>
+						</div>
+						<div class="add-to-cart">
+							<div class="add-to-cart__btn" data-product-id="8">Add to Cart</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="product__img">
+							<img src="https://picsum.photos/300/307" alt="" />
+						</div>
+						<div class="product__name">Eight Product</div>
+						<div class="product__price">
+							<div class="currency">$</div>
+							<div class="price">5.99</div>
+						</div>
+						<div class="add-to-cart">
+							<div class="add-to-cart__btn" data-product-id="9">Add to Cart</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="product__img">
+							<img src="https://picsum.photos/300/308" alt="" />
+						</div>
+						<div class="product__name">Ninth Product</div>
+						<div class="product__price">
+							<div class="currency">$</div>
+							<div class="price">6.99</div>
+						</div>
+						<div class="add-to-cart">
+							<div class="add-to-cart__btn" data-product-id="10">Add to Cart</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="product__img">
+							<img src="https://picsum.photos/300/309" alt="" />
+						</div>
+						<div class="product__name">Tenth Product</div>
+						<div class="product__price">
+							<div class="currency">$</div>
+							<div class="price">19.99</div>
+						</div>
+						<div class="add-to-cart">
+							<div class="add-to-cart__btn" data-product-id="11">Add to Cart</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Shoping Section end -->
+			<!--   <div class="section" id="section3"></div> -->
+			<!-- section end -->
+			<!--   <div class="section" id="section4"></div> -->
+			<!-- Section end -->
+			<div class="section contact" id="section5">
+				<form>
+					<div class="left">
+						<span class="background-text">Contact</span>
+					</div>
+					<div class="right">
+						<div class="input">
+							<label for="">First Name</label>
+							<input type="text" placeholder="Your First Name" />
+						</div>
+						<div class="input">
+							<label for="">Last Name</label>
+							<input type="text" placeholder="Your Last Name" />
+						</div>
+						<div class="input">
+							<label for="">Email</label>
+							<input type="email" placeholder="example@example.com" />
+						</div>
+						<div class="input">
+							<label for="">Subject</label>
+							<input type="text" placeholder="Why are you writing?" />
+						</div>
+						<div class="input">
+							<label for="">Message</label>
+							<textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+						</div>
+						<button>Send</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+	<script defer src="app.js"></script>
 </html>
